@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="656a614f-56c9-4c5e-ba60-1158d977eddb" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="gitdemoproject2Flow" doc:id="f33084e4-88e5-4a79-a831-8702147ee524" >
+		<http:listener doc:name="Listener" doc:id="f69ff477-eb4b-471d-bef9-86ab9ae679da" config-ref="HTTP_Listener_config" path="/hi"/>
+		<logger level="INFO" doc:name="Logger" doc:id="a7f8387a-6bec-4dd2-bb78-ed3f2fca558c" message="Git Demo log"/>
+	</flow>
+</mule>
