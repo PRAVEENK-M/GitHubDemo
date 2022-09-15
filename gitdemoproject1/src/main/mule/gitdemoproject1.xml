@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="gitdemoproject1Flow" doc:id="fd404a33-5ec5-4016-83f0-cbaa6c7e4a84" >
 		<http:listener doc:name="Listener" doc:id="dea1aa3c-43f3-410c-8dcd-21e0f192670e" config-ref="HTTP_Listener_config" path="/hello"/>
 		<logger level="INFO" doc:name="Logger" doc:id="389b1a0a-e1cd-4159-9132-6b3bf5c8df59" message="Received Request"/>
+		<logger level="INFO" doc:name="Logger" doc:id="9f590cda-910c-4a0e-b3b4-c0c65a846a0f" message="Compare log"/>
 	</flow>
 </mule>
